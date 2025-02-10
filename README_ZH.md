@@ -1,22 +1,18 @@
-# InfluxDB-Java
+# influxdb-java
 
 [![Build Status](https://github.com/influxdata/influxdb-java/workflows/master/badge.svg)](https://github.com/influxdata/influxdb-java/actions)
 
-This library is for use with InfluxDB 1.x and openGemini. The original code is from https://github.com/influxdata/influxdb-java
+在原来代码基础上，我们实现了在网络数据传输时支持Lz4 压缩，加速数据传输效率。
 
-Based on the original InfluxDB-Java code, we have implemented support for Lz4 compression during network data transmission to speed up data transmission efficiency.
+## 特性
 
-## Features
+当服务器将查询的数据返回给客户端时，会先对数据进行压缩，以提高网络传输速率。默认支持GZIP压缩，现新增lz4压缩选项。
 
-When the server returns the queried data to the client, the data will be compressed first to increase the network transmission rate.  Now the default support for GZIP compression, the new lz4 compression option.
+## 使用该库
 
-For more detail see [Query_LZ4](./QUERY_LZ4.md)
+由于InfluxDB-Java已停止维护，如需使用上述新特性，需在本地编译生成JAR文件并引入到项目中。我们团队仅负责维护该新特性，若在使用InfluxDB-Java过程中遇到其他问题，建议切换至[openGemini-Java-Client](https://github.com/openGemini/opengemini-client-java)，该客户端仍兼容Java 8运行环境，但编译时需使用Java 17+。
 
-## Adding the library to your project
-
-Since InfluxDB-Java has discontinued maintenance for version 1.x, to utilize the aforementioned new features, you need to compile its JAR file locally and integrate it into your project. 
-
-Our team only maintains support for this new feature. If you encounter other issues while using InfluxDB-Java, we recommend switching to [openGemini-Java-Client](https://github.com/openGemini/opengemini-client-java). The client remains compatible with Java 8 runtime environments, but compiling it requires Java 17.
+了解更多，见[QUERY_LZ4](./QUERY_LZ4.md)
 
 ## Quick start
 
