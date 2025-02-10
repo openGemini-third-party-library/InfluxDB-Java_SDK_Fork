@@ -1,6 +1,6 @@
 # InfluxDB-Java
 
-[![Build Status](https://github.com/influxdata/influxdb-java/workflows/master/badge.svg)](https://github.com/influxdata/influxdb-java/actions)
+[![Build Status](https://github.com/influxdata/influxdb-java/workflows/master/badge.svg)](https://github.com/influxdata/influxdb-java/actions) [中文](./README_ZH.md)
 
 This library is for use with InfluxDB 1.x and openGemini. The original code is from https://github.com/influxdata/influxdb-java
 
